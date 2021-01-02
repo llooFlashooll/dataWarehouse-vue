@@ -14,11 +14,11 @@
         <template slot="title">
             <i class="el-icon-video-camera"></i>检索
         </template>
-        <el-menu-item index="/movieCondition">
+        <el-menu-item index="mysql_movieCondition">
             <i class="el-icon-video-camera-solid"></i>
             <a slot="title">电影条件查询mysql</a>
         </el-menu-item>
-        <el-menu-item index="/movieCondition2">
+        <el-menu-item index="neo4j_movieCondition">
             <i class="el-icon-video-camera-solid"></i>
             <a slot="title">电影条件查询neo4j</a>
         </el-menu-item>
@@ -28,13 +28,28 @@
         </el-menu-item>
         <el-menu-item index="/movieCollection">
             <i class="el-icon-video-camera"></i>
-            <a slot="title">系列电影查询</a>
+            <a slot="title">分类查询</a>
         </el-menu-item>
-        <el-menu-item index="/movieRelation">
+
+        <el-menu-item index="/cooperation">
             <i class="el-icon-video-camera"></i>
             <a slot="title">合作关系查询</a>
         </el-menu-item>
+        <el-menu-item index="/topCooperation">
+          <i class="el-icon-video-camera"></i>
+          <a slot="title">最多合作查询</a>
+        </el-menu-item>
+        <el-menu-item index="/sameSeriesMovie">
+          <i class="el-icon-video-camera"></i>
+          <a slot="title">同系列电影</a>
+        </el-menu-item>
+        <el-menu-item index="/movieProduct">
+          <i class="el-icon-video-camera"></i>
+          <a slot="title">电影产品查询</a>
+        </el-menu-item>
+
       </el-submenu>
+
 
     </el-menu>
   </el-aside>
