@@ -107,11 +107,11 @@
 
         <el-table :data="movies">
         <el-table-column prop="title" label="标题" align="center" />
-        <!-- <el-table-column prop="rate" label="评分" align="center" />
+        <el-table-column prop="rate" label="评分" align="center" />
         <el-table-column prop="runtime" label="电影时长" align="center" />
         <el-table-column prop="releaseYear" label="上映年份" align="center" />
         <el-table-column prop="releaseMonth" label="上映月份" align="center" />
-        <el-table-column prop="releaseDay" label="上映日期" align="center" /> -->
+        <el-table-column prop="releaseDay" label="上映日期" align="center" />
         </el-table>
     </el-card>
   </div>
@@ -306,9 +306,8 @@ export default {
                 // this.productNum = data.obj.productCount
                 
                 console.log(data.obj)
-                this.movies.title = data.obj
+                this.movies = data.obj
                 console.log(this.movies)
-                console.log(this.movies.title)
             }
         })
         .catch(Error=>{
