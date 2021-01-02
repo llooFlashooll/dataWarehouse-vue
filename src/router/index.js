@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Register from '@/views/Register'
 import Login from "@/views/Login";
 import Home from "@/views/Home"
-import User from "@/views/User";
+import Condition from "@/views/Condition";
 
 
 Vue.use(Router)
@@ -35,10 +35,10 @@ const routes = [{
         },
 
         children: [{
-            path: '/user',
-            component: User,
+            path: '/movieCondition',
+            component: Condition,
             meta: {
-                name: '用户信息'
+                name: '电影条件查询mysql'
             }
 
         }]

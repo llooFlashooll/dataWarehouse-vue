@@ -12,18 +12,29 @@
 
       <el-submenu index="/" class="submenu">
         <template slot="title">
-            <i class="el-icon-s-custom"></i>
+            <i class="el-icon-video-camera"></i>检索
         </template>
-        <el-menu-item index="/user">
-            <i class="el-icon-user-solid"></i>
-            <a slot="title">用户信息</a>
+        <el-menu-item index="/movieCondition">
+            <i class="el-icon-video-camera-solid"></i>
+            <a slot="title">电影条件查询mysql</a>
+        </el-menu-item>
+        <el-menu-item index="/movieCondition2">
+            <i class="el-icon-video-camera-solid"></i>
+            <a slot="title">电影条件查询neo4j</a>
+        </el-menu-item>
+        <el-menu-item index="/movieCondition2">
+            <i class="el-icon-video-camera-solid"></i>
+            <a slot="title">电影条件查询hive</a>
+        </el-menu-item>
+        <el-menu-item index="/movieCollection">
+            <i class="el-icon-video-camera"></i>
+            <a slot="title">系列电影查询</a>
+        </el-menu-item>
+        <el-menu-item index="/movieRelation">
+            <i class="el-icon-video-camera"></i>
+            <a slot="title">合作关系查询</a>
         </el-menu-item>
       </el-submenu>
-
-      <el-menu-item index="/problemList">
-        <i class="el-icon-s-order"></i>
-        <a slot="title">库存</a>
-      </el-menu-item>
 
     </el-menu>
   </el-aside>

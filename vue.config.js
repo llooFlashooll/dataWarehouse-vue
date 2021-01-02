@@ -45,7 +45,7 @@ module.exports = {
         open: process.platform === 'darwin',
         disableHostCheck: true,
         host: 'localhost', //如果是真机测试，就使用这个IP
-        port: 8080,
+        port: 9000,
         https: false,
         hotOnly: false,
         before: app => {}

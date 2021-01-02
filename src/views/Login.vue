@@ -3,7 +3,7 @@
   <div class="page">
 
     <div class="title-container">
-      <h1 class="header">欢迎使用 cloudmall</h1>
+      <h1 class="header">欢迎使用 电影检索系统</h1>
     </div>
 
     <el-card class="box" shadow="always">
@@ -36,7 +36,7 @@
 
     <div id="copyright" style="position:fixed; bottom:20px; width: 100%">
       <div class="copyright">
-        <p>COPYRIGHT © 2020 <a href="#" target="_blank">TONGJI CLOUDMALL</a>. ALL RIGHTS RESERVED.</p>
+        <p>COPYRIGHT © 2020 <a href="#" target="_blank">TONGJI MOVIE RETRIEVAL</a>. ALL RIGHTS RESERVED.</p>
       </div>
     </div>
 
