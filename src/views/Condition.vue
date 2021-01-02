@@ -56,7 +56,7 @@
 
         <el-col :span="12" :xs="24">
 
-            <el-card>
+            <el-card class="box-card" shadow="hover">
                 <!-- command查询命令展示 -->
                 <el-table :data="commandList" stripe>
                     <el-table-column prop="field" label="属性域" align="center" />
@@ -113,6 +113,16 @@
         <el-table-column prop="releaseMonth" label="上映月份" align="center" />
         <el-table-column prop="releaseDay" label="上映日期" align="center" />
         </el-table>
+
+        <!--分页-->
+        <el-pagination
+            background
+            layout="prev, pager, next"
+            @current-change="handleCurrentChange"
+            :total="total"
+            :page-size="pageSize"
+            :current-page="pageNum">
+        </el-pagination>
     </el-card>
   </div>
 </template>
@@ -199,7 +209,9 @@ export default {
         // ==============================================
         products: [],
         movies: [],
-        reviews: []
+        reviews: [],
+        pageNum: 1,
+        pageSize: 10
     }
   },
   created() {
@@ -292,8 +304,8 @@ export default {
 
     handleQuery2: function() {
    
-        this.requestBody.pageNum = 1
-        this.requestBody.pageSize = 10
+        this.requestBody.pageNum = this.pageNum
+        this.requestBody.pageSize = this.pageSize
         console.log(this.requestBody)
 
         this.$axios.post("http://localhost:8080/mysql/getMovieList", this.requestBody)
@@ -313,6 +325,13 @@ export default {
         .catch(Error=>{
             console.log(Error)
         })
+    },
+
+    
+    handleCurrentChange:function(newnum){
+      this.pageNum = newnum;
+      console.log(this.pageNum);
+      this.handleQuery2();
     },
 
 
