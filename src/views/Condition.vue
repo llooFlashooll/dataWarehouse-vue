@@ -70,7 +70,7 @@
                 </el-table>
                 <!-- 查询 -->
                 <el-button icon="el-icon-search" plain @click="handleQuery">查询信息</el-button>
-            
+
                 <el-button icon="el-icon-search" plain @click="handleQuery2">查询电影详细信息</el-button>
             </el-card>
         </el-col>
@@ -216,7 +216,7 @@ export default {
     },
     // 增加 command
     handleCommandAdd: function() {
-        
+
         this.commandList.push({
             field: this.field,
             condition: this.condition,
@@ -270,7 +270,7 @@ export default {
                 this.requestBody.actor = this.value
                 break;
         }
-        
+
         console.log(this.$data.commandList)
     },
     // 进行电影的查询
@@ -294,7 +294,7 @@ export default {
     },
 
     handleQuery2: function() {
-   
+
         this.requestBody.pageNum = this.pageNum
         this.requestBody.pageSize = this.pageSize
         console.log(this.requestBody)
@@ -307,7 +307,7 @@ export default {
                 this.queryTime = data.queryTime
                 // this.movieNum = data.obj.movieCount
                 // this.productNum = data.obj.productCount
-                
+
                 console.log(data.obj)
                 this.movies = data.obj
                 console.log(this.movies)
@@ -318,7 +318,7 @@ export default {
         })
     },
 
-    
+
     handleCurrentChange:function(newnum){
       this.pageNum = newnum;
       console.log(this.pageNum);
@@ -330,7 +330,7 @@ export default {
 
 
     open1() {
-        const h = this.$createElement;
+        //const h = this.$createElement;
         this.$notify({
             title: '类别列表',
             dangerouslyUseHTMLString: true,
@@ -343,7 +343,7 @@ export default {
     },
 
     open2() {
-        const h = this.$createElement;
+       // const h = this.$createElement;
         this.$notify({
             title: '语言列表',
             dangerouslyUseHTMLString: true,
@@ -356,7 +356,7 @@ export default {
     },
 
     open3() {
-        const h = this.$createElement;
+       // const h = this.$createElement;
         this.$notify({
             title: '媒介列表',
             dangerouslyUseHTMLString: true,
