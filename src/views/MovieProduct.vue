@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="movieproduct_container">
     <el-card>
       <div>
         <span>电影名称</span>
@@ -75,5 +75,9 @@ export default {
 </script>
 
 <style scoped>
-
+.movieproduct_container {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 </style>

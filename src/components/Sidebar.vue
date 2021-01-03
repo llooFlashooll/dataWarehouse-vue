@@ -22,7 +22,7 @@
             <i class="el-icon-video-camera-solid"></i>
             <a slot="title">电影条件查询neo4j</a>
         </el-menu-item>
-        <el-menu-item index="/movieCondition3">
+        <el-menu-item index="/hive_movieCondition">
             <i class="el-icon-video-camera-solid"></i>
             <a slot="title">电影条件查询hive</a>
         </el-menu-item>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="neo4j_container">
     <el-row :gutter="20">
 
       <!-- 选择查询命令 -->
@@ -32,7 +32,7 @@
 
       <el-col :span="12" :xs="24">
 
-        <el-card>
+        <el-card class="box-card" shadow="hover">
           <!-- command查询命令展示 -->
           <el-table :data="commandList" stripe>
             <el-table-column prop="field" label="属性域" align="center" />
@@ -185,5 +185,9 @@ export default {
 </script>
 
 <style scoped>
-
+.neo4j_container {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 </style>

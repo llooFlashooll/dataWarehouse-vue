@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="topcooperation_container">
     <el-card>
       <div>
         <span>合作关系</span>
@@ -86,5 +86,9 @@ export default {
 </script>
 
 <style scoped>
-
+.topcooperation_container {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="statistic_container">
     <div>
       <el-card>
         <el-select v-model="field" placeholder="请选择属性域" clearable filterable>
@@ -72,5 +72,9 @@ export default {
 </script>
 
 <style scoped>
-
+.statistic_container {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 </style>

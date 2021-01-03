@@ -10,6 +10,7 @@ import Cooperation from "@/views/Cooperation";
 import TopCooperation from "@/views/TopCooperation";
 import SameSeriesMovie from "@/views/SameSeriesMovie";
 import MovieProduct from "@/views/MovieProduct";
+import Hive from "@/views/Hive";
 
 Vue.use(Router)
 
@@ -46,39 +47,45 @@ const routes = [{
                 name: '电影条件查询mysql'
             }
 
-        },{
+        }, {
+            path: 'hive_movieCondition',
+            component: Hive,
+            meta: {
+                name: '电影条件查询hive'
+            }
+        }, {
             path: 'neo4j_movieCondition',
             component: Neo4j,
             meta: {
                 name: '电影条件查询neo4j'
             }
 
-        },{
+        }, {
             path: 'movieCollection',
             component: Statistic,
             meta: {
                 name: '分类查询'
             }
 
-        },{
+        }, {
             path: 'cooperation',
             component: Cooperation,
             meta: {
                 name: '合作查询'
             }
-        },{
+        }, {
             path: 'topCooperation',
             component: TopCooperation,
             meta: {
                 name: '最多合作查询'
             }
-        },{
+        }, {
             path: 'sameSeriesMovie',
             component: SameSeriesMovie,
             meta: {
                 name: '同系列电影'
             }
-        },{
+        }, {
             path: 'movieProduct',
             component: MovieProduct,
             meta: {
