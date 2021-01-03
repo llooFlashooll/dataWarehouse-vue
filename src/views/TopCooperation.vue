@@ -12,7 +12,6 @@
               active-value="director"
               inactive-text="演员"
               inactive-value="actor"
-              :width="20"
           />
         </el-form-item>
         <el-form-item label="与">
@@ -22,20 +21,17 @@
               active-value="director"
               inactive-text="演员"
               inactive-value="actor"
-              :width="20"
           />
         </el-form-item>
         <el-form-item>
           <el-button icon="el-icon-search" plain @click="handleQuery" />
         </el-form-item>
         <br>
-        <el-form-item label="查询时间: ">
-          <el-tag>{{ queryTime }} ms</el-tag>
-        </el-form-item>
       </el-form>
     </el-card>
 
     <el-card>
+      <div>查询时间:{{queryTime}}ms</div>
       <el-table :data="cooperation" stripe>
         <el-table-column prop="name" label="名字" align="center" />
         <el-table-column prop="count" label="合作次数" align="center" />
