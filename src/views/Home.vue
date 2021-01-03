@@ -10,7 +10,7 @@
           <Navbar/>
 
           <div v-show="routeName == '首页'" class="home_container">
-            我是谁？妙蛙种子！
+            数据仓库项目——电影检索平台
           </div>    
 
           <!-- 路由占位符-->
