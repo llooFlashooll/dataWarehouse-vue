@@ -84,21 +84,12 @@
         </div>
         <br>
         <el-form :inline="true" size="small">
-            <el-form-item>
-                <i class="el-icon-d-arrow-right" />
-            </el-form-item>
             <el-form-item label="查询时间:">
                 <el-tag>{{ queryTime }} ms</el-tag>
             </el-form-item>
             <br>
-            <el-form-item>
-                <i class="el-icon-d-arrow-right" />
-            </el-form-item>
             <el-form-item label="电影总数: ">
                 <el-tag>{{ movieNum }} 个</el-tag>
-            </el-form-item>
-            <el-form-item>
-                <i class="el-icon-d-arrow-right" />
             </el-form-item>
             <el-form-item label="产品总数: ">
                 <el-tag>{{ productNum }} 个</el-tag>

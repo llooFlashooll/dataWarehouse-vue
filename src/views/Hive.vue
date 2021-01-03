@@ -83,9 +83,6 @@
         </div>
         <br>
         <el-form :inline="true" size="small">
-            <el-form-item>
-                <i class="el-icon-d-arrow-right" />
-            </el-form-item>
             <el-form-item label="查询时间:">
                 <el-tag>{{ queryTime }} ms</el-tag>
             </el-form-item>
