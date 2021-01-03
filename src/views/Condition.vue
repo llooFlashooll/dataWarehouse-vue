@@ -121,6 +121,23 @@
             :current-page="pageNum">
         </el-pagination>
     </el-card>
+
+    <el-dialog title="评论具体信息" :visible.sync="reviewVisible" width="70%" center>
+      <el-row>
+        <el-col :span="6">
+          查询时间 : <el-tag>{{ queryReviewTime }} ms</el-tag>
+        </el-col>
+      </el-row>
+      <el-table :data="reviews" stripe>
+        <el-table-column prop="profileName" label="名称" align="center" />
+        <el-table-column prop="helpfulness" label="评论价值" align="center"/>
+        <el-table-column prop="summary" label="评论总结" align="center" sortable />
+
+      </el-table>
+      <span slot="footer">
+        <el-button size="mini" @click="reviewVisible = false">关闭</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -208,7 +225,11 @@ export default {
         movies: [],
         reviews: [],
         pageNum: 1,
-        pageSize: 10
+        pageSize: 10,
+
+        // 评论
+        reviewVisible: false,
+        queryReviewTime: 0
     }
   },
   created() {
@@ -332,8 +353,29 @@ export default {
     },
 
     viewRiew:function(productId) {
-        console.log(productId)
-        alert(productId)
+        console.log(String(productId))
+
+        this.reviewVisible = true
+
+        this.$axios.post("http://localhost:8080/mysql/getReviewList", String(productId))
+        .then(res=>{
+            console.log("这里是评论")
+            console.log(res);
+            console.log(res.data);
+            const data = res.data
+            if(data.msg == "ok") {
+                this.queryReviewTime = data.queryTime
+                // this.movieNum = data.obj.movieCount
+                // this.productNum = data.obj.productCount
+
+                console.log(data.obj)
+                this.reviews = data.obj
+                console.log(this.reviews)
+            }
+        })
+        .catch(Error=>{
+            console.log(Error)
+        })
     },
 
 
