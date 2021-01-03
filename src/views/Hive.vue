@@ -90,6 +90,13 @@
             <el-form-item>
                 <i class="el-icon-d-arrow-right" />
             </el-form-item>
+            <el-form-item label="查询时间:">
+                <el-tag>{{ queryTime }} ms</el-tag>
+            </el-form-item>
+            <br>
+            <el-form-item>
+                <i class="el-icon-d-arrow-right" />
+            </el-form-item>
             <el-form-item label="电影总数: ">
                 <el-tag>{{ movieNum }} 个</el-tag>
             </el-form-item>
@@ -182,6 +189,14 @@ export default {
         queryTime: 0,
         movieNum: 0,
         productNum: 0,
+        // ==============================================
+        //                 信息类查询结果
+        // ==============================================
+        products: [],
+        movies: [],
+        reviews: [],
+        pageNum: 1,
+        pageSize: 10
     }
   },
   created() {
