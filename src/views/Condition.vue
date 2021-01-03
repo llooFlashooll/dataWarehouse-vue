@@ -97,12 +97,18 @@
         </el-form>
 
         <el-table :data="movies">
+        <el-table-column prop="productId" label="产品id" align="center" />
         <el-table-column prop="title" label="标题" align="center" />
         <el-table-column prop="rate" label="评分" align="center" />
         <el-table-column prop="runtime" label="电影时长" align="center" />
         <el-table-column prop="releaseYear" label="上映年份" align="center" />
         <el-table-column prop="releaseMonth" label="上映月份" align="center" />
         <el-table-column prop="releaseDay" label="上映日期" align="center" />
+        <el-table-column label="查看评论" align="center">
+            <template slot-scope="scope">
+                <el-button type="primary" @click="viewRiew(scope.row.productId)" >查看</el-button>
+            </template>
+        </el-table-column>
         </el-table>
 
         <!--分页-->
@@ -320,9 +326,14 @@ export default {
 
     
     handleCurrentChange:function(newnum){
-      this.pageNum = newnum;
-      console.log(this.pageNum);
-      this.handleQuery2();
+        this.pageNum = newnum;
+        console.log(this.pageNum);
+        this.handleQuery2();
+    },
+
+    viewRiew:function(productId) {
+        console.log(productId)
+        alert(productId)
     },
 
 
